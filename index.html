@@ -1,188 +1,158 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Magnifica Humanitas — iniciativa independente de estudo e diálogo cultural sobre a Encíclica Magnifica Humanitas e a dignidade humana na era da inteligência artificial."
-    />
-    <title>Magnifica Humanitas</title>
-    <link rel="stylesheet" href="assets/style.css" />
-  </head>
-  <body>
-    <a class="skip-link" href="#conteudo">Ir para o conteúdo principal</a>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Magnifica Humanitas — plataforma cultural e acadêmica dedicada ao estudo da Encíclica Magnifica Humanitas e ao diálogo entre arte, tecnologia e Doutrina Social.">
+  <title>Magnifica Humanitas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="site-header" id="inicio">
+    <div class="container header-wrap">
+      <a class="brand" href="#inicio" aria-label="Página inicial Magnifica Humanitas">
+        <span class="brand-title">Magnifica Humanitas</span>
+        <span class="brand-subtitle">Arte, Tecnologia e Doutrina Social</span>
+      </a>
 
-    <header class="site-header" id="topo">
-      <div class="container header-inner">
-        <a class="brand" href="#topo" aria-label="Voltar ao topo">Magnifica Humanitas</a>
+      <button class="menu-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
 
-        <button
-          class="menu-toggle"
-          id="menuToggle"
-          aria-expanded="false"
-          aria-controls="menuPrincipal"
-          aria-label="Abrir menu"
-        >
-          <span></span><span></span><span></span>
-        </button>
+      <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#enciclica">A Encíclica</a></li>
+          <li><a href="#projeto">O Projeto</a></li>
+          <li><a href="#eixos">Eixos de Pesquisa</a></li>
+          <li><a href="#cadernos">Cadernos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-        <nav class="main-nav" id="menuPrincipal" aria-label="Menu principal">
-          <ul>
-            <li><a href="#enciclica">Encíclica</a></li>
-            <li><a href="#arte-tecnologia">Arte e Tecnologia</a></li>
-            <li><a href="#mecanismos">Mecanismos</a></li>
-            <li><a href="#doutrina">Doutrina Social</a></li>
-            <li><a href="#pesquisa">Pesquisa</a></li>
-            <li><a href="#contato">Contato</a></li>
-          </ul>
-        </nav>
+  <main>
+    <section class="hero ornate-bg">
+      <div class="container hero-content">
+        <p class="eyebrow">Plataforma cultural e acadêmica</p>
+        <h1>Magnifica Humanitas</h1>
+        <h2>Arte, Tecnologia e dignidade da pessoa humana</h2>
+        <p>
+          Plataforma cultural e acadêmica em desenvolvimento, orientada ao estudo da Encíclica Magnifica Humanitas e à investigação de suas implicações para a Arte, a Tecnologia e a vida social.
+        </p>
+        <div class="btn-group">
+          <a class="btn btn-primary" href="#enciclica">Ler a Encíclica</a>
+          <a class="btn btn-secondary" href="#projeto">Conhecer o Projeto</a>
+          <a class="btn btn-secondary" href="#eixos">Explorar os Eixos</a>
+        </div>
       </div>
-    </header>
+    </section>
 
-    <main id="conteudo">
-      <section class="hero section">
-        <div class="container">
-          <p class="eyebrow">Iniciativa independente de estudo e diálogo cultural</p>
-          <h1>Magnifica Humanitas</h1>
-          <h2>Arte, Tecnologia e Dignidade Humana</h2>
-          <p class="lead">
-            Um espaço de estudo, documentação e diálogo fiel à Doutrina da Igreja Católica a partir da
-            Encíclica Magnifica Humanitas, do Papa Leão XIV.
-          </p>
-
-          <div class="hero-actions">
-            <a
-              class="btn btn-primary"
-              href="https://www.vatican.va/content/leo-xiv/pt/encyclicals/documents/20260515-magnifica-humanitas.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Ler a Encíclica no Vaticano</a
-            >
-            <a class="btn btn-secondary" href="assets/magnificahumanitas.pdf" download>Baixar PDF</a>
-            <a class="btn btn-ghost" href="#pesquisa">Projeto de Pesquisa</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="enciclica">
-        <div class="container narrow">
-          <h2>A Encíclica</h2>
-          <p>
-            A Encíclica <em>Magnifica Humanitas</em> aborda a salvaguarda da pessoa humana na era da
-            inteligência artificial, convocando reflexão moral, responsabilidade política e discernimento
-            cultural diante dos sistemas técnicos contemporâneos.
-          </p>
-          <p>
-            Consulte o texto oficial no Vaticano:
-            <a
-              href="https://www.vatican.va/content/leo-xiv/pt/encyclicals/documents/20260515-magnifica-humanitas.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              >magnifica-humanitas (15/05/2026)</a
-            >.
-          </p>
-          <p>
-            <!-- Inserir o arquivo em: assets/magnificahumanitas.pdf -->
-            <a class="btn btn-secondary" href="assets/magnificahumanitas.pdf" download
-              >Baixar PDF local</a
-            >
-          </p>
-          <p class="note">
-            Nota: este site não é oficial da Santa Sé; trata-se de uma iniciativa independente para estudo e
-            diálogo em comunhão com o ensinamento da Igreja.
-          </p>
-        </div>
-      </section>
-
-      <section class="section alt" id="arte-tecnologia">
-        <div class="container narrow">
-          <h2>Arte e Tecnologia</h2>
-          <p>
-            A tecnologia não é apenas instrumento: ela organiza modos de percepção, decisão, participação e
-            vida comum. A arte, nesse contexto, pode tornar visíveis os sistemas técnicos que moldam a
-            experiência humana.
-          </p>
-        </div>
-      </section>
-
-      <section class="section" id="mecanismos">
-        <div class="container narrow">
-          <h2>Desenho de Mecanismos</h2>
-          <p>
-            O projeto investiga como regras, incentivos, interfaces e protocolos digitais estruturam formas de
-            participação coletiva. À luz da <em>Magnifica Humanitas</em>, essa investigação é orientada pela
-            dignidade da pessoa humana, pelo bem comum, pela justiça social, pela subsidiariedade e pela
-            solidariedade.
-          </p>
-        </div>
-      </section>
-
-      <section class="section alt" id="doutrina">
-        <div class="container">
-          <h2>Doutrina Social da Igreja</h2>
-          <div class="cards">
-            <article class="card"><h3>Dignidade da pessoa humana</h3></article>
-            <article class="card"><h3>Bem comum</h3></article>
-            <article class="card"><h3>Destinação universal dos bens</h3></article>
-            <article class="card"><h3>Subsidiariedade</h3></article>
-            <article class="card"><h3>Solidariedade</h3></article>
-            <article class="card"><h3>Justiça social</h3></article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="pesquisa">
-        <div class="container narrow">
-          <h2>Projeto de Pesquisa</h2>
-          <h3>Arte, Tecnologia e Mecanismos de Participação</h3>
-          <p>
-            Este eixo prepara uma investigação acadêmica sobre desenho de mecanismos, sistemas multiagentes,
-            mercados participativos, interfaces e formas coletivas de decisão, sempre submetida ao
-            discernimento moral da Doutrina Social da Igreja.
-          </p>
-        </div>
-      </section>
-
-      <section class="section fidelity" id="fidelidade">
-        <div class="container narrow">
-          <h2>Declaração de fidelidade</h2>
-          <p>
-            Esta iniciativa se coloca em atitude de escuta, obediência e correção diante da Santa Doutrina da
-            Igreja Católica. Qualquer formulação aqui publicada deverá ser corrigida sempre que se afastar do
-            Magistério, da Tradição ou da comunhão com a Igreja de Pedro.
-          </p>
-        </div>
-      </section>
-
-      <section class="section" id="contato">
-        <div class="container narrow">
-          <h2>Contato</h2>
-          <p>
-            E-mail: <a href="mailto:aquinomartins.art@gmail.com">aquinomartins.art@gmail.com</a>
-          </p>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
+    <section class="section presentation">
       <div class="container narrow">
+        <h3>Uma iniciativa de estudo e desenvolvimento</h3>
         <p>
-          Este site é uma iniciativa independente de estudo e pesquisa. Não é um site oficial da Santa Sé, do
-          Vaticano ou de qualquer organismo eclesiástico.
-        </p>
-        <p>
-          Texto oficial:
-          <a
-            href="https://www.vatican.va/content/leo-xiv/pt/encyclicals/documents/20260515-magnifica-humanitas.html"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Vatican.va — Magnifica Humanitas</a
-          >
+          Magnifica Humanitas nasce como uma plataforma laical de pesquisa, documentação e formação, dedicada ao diálogo entre a tradição intelectual católica, a cultura contemporânea e os problemas emergentes da técnica. Seu ponto de partida é a Encíclica de Leão XIV, tomada não apenas como documento a ser divulgado, mas como princípio de reflexão para um trabalho continuado de leitura, elaboração e aprofundamento.
         </p>
       </div>
-    </footer>
+    </section>
 
-    <script src="assets/script.js"></script>
-  </body>
+    <section class="section enciclica" id="enciclica">
+      <div class="container grid-two">
+        <div>
+          <h3>A Encíclica</h3>
+          <p>
+            A Encíclica Magnifica Humanitas oferece um horizonte de discernimento sobre a pessoa humana na era da inteligência artificial. A partir da Doutrina Social da Igreja, o documento recoloca em primeiro plano temas como dignidade, verdade, responsabilidade, trabalho, justiça e bem comum, convocando uma leitura atenta das transformações técnicas do presente.
+          </p>
+          <div class="btn-group">
+            <a class="btn btn-primary" href="https://www.vatican.va" target="_blank" rel="noopener noreferrer">Ler no site da Santa Sé</a>
+            <a class="btn btn-ghost" href="#" aria-label="Baixar versão em PDF">Baixar versão em PDF</a>
+          </div>
+        </div>
+        <aside class="frame-note" aria-label="Nota institucional">
+          <p>
+            Conteúdo em curadoria permanente, com atualização gradual de referências, notas de leitura e materiais de apoio.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="projeto">
+      <div class="container narrow">
+        <h3>O projeto</h3>
+        <p>
+          A plataforma encontra-se em processo de consolidação editorial e conceitual. Seu objetivo é reunir textos, cadernos, ensaios visuais, percursos de leitura e linhas de pesquisa que articulem pensamento católico, produção artística e reflexão tecnológica. Trata-se de construir, com método e sobriedade, um espaço de trabalho intelectual capaz de servir ao estudo, à formação e ao debate qualificado.
+        </p>
+      </div>
+    </section>
+
+    <section class="section axes" id="eixos">
+      <div class="container">
+        <h3>Eixos de trabalho</h3>
+        <div class="cards">
+          <article class="card">
+            <h4>Doutrina Social da Igreja</h4>
+            <p>Princípios de discernimento para a vida econômica, técnica, política e cultural, com atenção especial à dignidade da pessoa humana, ao bem comum, à subsidiariedade e à solidariedade.</p>
+          </article>
+          <article class="card">
+            <h4>Arte e cultura visual</h4>
+            <p>Investigação das formas pelas quais a arte interpreta, figura e critica os dispositivos técnicos, as imagens do humano e os modos contemporâneos de percepção.</p>
+          </article>
+          <article class="card">
+            <h4>Tecnologia e inteligência artificial</h4>
+            <p>Estudo da técnica como mediação histórica e cultural, com atenção às novas arquiteturas algorítmicas, às plataformas e aos efeitos morais e sociais da automação.</p>
+          </article>
+          <article class="card">
+            <h4>Mecanismos, mediação e participação</h4>
+            <p>Pesquisa sobre regras, protocolos, interfaces e sistemas de coordenação coletiva, examinados à luz das exigências éticas da vida comum e da tradição intelectual católica.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="cadernos">
+      <div class="container narrow">
+        <h3>Cadernos em desenvolvimento</h3>
+        <p>
+          O site abrigará progressivamente uma coleção de cadernos temáticos, reunindo leituras comentadas da Encíclica, textos introdutórios, ensaios, esquemas conceituais e materiais de apoio voltados ao estudo da relação entre fé, cultura, técnica e sociedade.
+        </p>
+        <ul class="list-refined">
+          <li>Leituras da Magnifica Humanitas</li>
+          <li>Arte e técnica</li>
+          <li>Dignidade humana e inteligência artificial</li>
+          <li>Doutrina Social e mediações digitais</li>
+          <li>Mecanismos de participação e bem comum</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section closing">
+      <div class="container narrow">
+        <h3>Um trabalho em construção</h3>
+        <p>
+          Esta plataforma está sendo desenvolvida como um espaço de maturação intelectual e editorial. Sua vocação é oferecer um ambiente sério de estudo, formulação e diálogo, em sintonia com a tradição da Igreja e atento aos desafios concretos do presente.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contato">
+    <div class="container footer-wrap">
+      <p>
+        Magnifica Humanitas é uma iniciativa laical independente de estudo e pesquisa. Não constitui órgão oficial da Santa Sé nem a representa institucionalmente.
+      </p>
+      <div class="footer-links">
+        <a href="https://www.vatican.va" target="_blank" rel="noopener noreferrer">Encíclica no Vaticano</a>
+        <a href="mailto:contato@magnificahumanitas.com.br">contato@magnificahumanitas.com.br</a>
+        <span>&copy; <span id="current-year"></span> Magnifica Humanitas</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/script.js"></script>
+</body>
 </html>
