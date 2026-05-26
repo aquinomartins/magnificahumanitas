@@ -1,24 +1,38 @@
-# Magnifica Humanitas (site estático)
+# Magnifica Humanitas
 
-Site estático, responsivo e leve para **magnificahumanitas.com.br**, desenvolvido com HTML, CSS e JavaScript puros.
+Landing page institucional/cultural da plataforma **Magnifica Humanitas**.
 
-## Estrutura
+## 1) Publicação no `public_html`
+1. Copie todos os arquivos e pastas deste projeto para `public_html`.
+2. Mantenha a estrutura:
+   - `index.html`
+   - `subscribe.php`
+   - `metrics.php`
+   - `assets/`
+   - `admin/`
+   - `data/`
 
-- `index.html` — página principal com seções institucionais.
-- `assets/style.css` — estilos e responsividade.
-- `assets/script.js` — menu mobile simples.
-- `assets/magnificahumanitas.pdf` — opcional (adicionar manualmente quando disponível).
+## 2) Imagem licenciada da Capela Sistina
+- Coloque a imagem em: `assets/img/capela-sistina-hero.jpg`.
+- **Importante:** use apenas imagem com licenciamento adequado para uso no site.
 
-## Publicação rápida (cPanel / public_html)
+## 3) PDF da Encíclica
+- Coloque o arquivo PDF em: `assets/docs/magnifica-humanitas.pdf`.
+- Ajuste o nome no `index.html` se preferir outro arquivo/caminho.
 
-1. Compacte os arquivos do projeto (ou envie por FTP).
-2. No servidor, copie tudo para `public_html/` mantendo a pasta `assets/`.
-3. Garanta que o arquivo principal esteja como `public_html/index.html`.
-4. (Opcional) Envie o PDF da encíclica em `public_html/assets/magnificahumanitas.pdf`.
+## 4) Ativar Google Analytics 4
+1. Abra `index.html`.
+2. Localize o bloco comentado do Google Tag.
+3. Substitua `G-XXXXXXXXXX` pelo ID real do GA4 e descomente o bloco.
 
-## Observações
+## 5) Adesões
+- Os cadastros são gravados em `data/subscribers.csv`.
+- Campos: `created_at`, `name`, `email`, `interest`.
 
-- Não utiliza frameworks ou bibliotecas externas.
-- Não possui dependências de build.
-- O site declara explicitamente que **não é oficial da Santa Sé**.
-- O link oficial do Vaticano está disponível no hero, na seção da Encíclica e no rodapé.
+## 6) Métricas locais
+- Acesse: `/admin/metrics.html`.
+- O painel lê o resumo via `../metrics.php?summary=1`.
+- O arquivo bruto fica protegido em `data/metrics.json`.
+
+## 7) Observação institucional
+**Magnifica Humanitas é uma iniciativa laical independente de estudo e pesquisa. Não constitui órgão oficial da Santa Sé nem a representa institucionalmente.**
