@@ -2,7 +2,7 @@
 // metrics.php - coleta local mínima de eventos sem dados sensíveis.
 
 date_default_timezone_set('UTC');
-$allowedEvents = ['page_view_local', 'read_vatican', 'download_pdf', 'hero_project_click', 'adhesion_submit', 'contact_click'];
+$allowedEvents = ['page_view_local','chapter_index_view','chapter_1_view','chapter_2_view','chapter_3_view','chapter_4_view','chapter_5_view','read_vatican','download_pdf','adhesion_submit','contact_click','visual_placeholder_click'];
 $dataDir = __DIR__ . '/data';
 $filePath = $dataDir . '/metrics.json';
 
