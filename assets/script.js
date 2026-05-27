@@ -1,9 +1,16 @@
 function trackEvent(eventName, params = {}) {
-  if (typeof window.gtag === "function") window.gtag("event", eventName, params);
+  if (typeof window.gtag === "function") {
+    window.gtag("event", eventName, params);
+  }
   fetch("metrics.php", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ event: eventName, params, path: window.location.pathname, ts: new Date().toISOString() })
+    body: JSON.stringify({
+      event: eventName,
+      params,
+      path: window.location.pathname,
+      ts: new Date().toISOString()
+    })
   }).catch(() => {});
 }
 
@@ -24,28 +31,34 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   document.querySelectorAll("[data-event]").forEach((el) => {
-    el.addEventListener("click", () => trackEvent(el.dataset.event || "nav_click"));
+    el.addEventListener("click", () => trackEvent(el.dataset.event || "unknown_click"));
   });
 
   const adhesionForm = document.getElementById("adhesionForm");
   const msg = document.getElementById("adhesionMessage");
-  if (!adhesionForm) return;
+  if (adhesionForm) {
+    adhesionForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const formData = new FormData(adhesionForm);
 
-  adhesionForm.addEventListener("submit", async (event) => {
-    event.preventDefault();
-    try {
-      const response = await fetch(adhesionForm.action, { method: "POST", body: new FormData(adhesionForm), headers: { "X-Requested-With": "fetch" } });
-      const data = await response.json();
-      if (msg) {
-        msg.textContent = data.message || "Solicitação recebida.";
-        msg.style.color = data.success ? "#075481" : "#ff1f2d";
+      try {
+        const response = await fetch(adhesionForm.action, {
+          method: "POST",
+          body: formData,
+          headers: { "X-Requested-With": "fetch" }
+        });
+        const data = await response.json();
+        if (msg) {
+          msg.textContent = data.message || "Solicitação recebida.";
+          msg.style.color = data.success ? "#314f3a" : "#8a2332";
+        }
+        if (data.success) {
+          adhesionForm.reset();
+          trackEvent("adhesion_submit");
+        }
+      } catch (err) {
+        adhesionForm.submit();
       }
-      if (data.success) {
-        trackEvent("adhesion_submit");
-        adhesionForm.reset();
-      }
-    } catch (error) {
-      adhesionForm.submit();
-    }
-  });
+    });
+  }
 });

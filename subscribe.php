@@ -1,5 +1,4 @@
 <?php
-declare(strict_types=1);
 // subscribe.php - cadastro simples de adesão. Preparado para futura integração com serviço de e-mail.
 
 date_default_timezone_set('UTC');

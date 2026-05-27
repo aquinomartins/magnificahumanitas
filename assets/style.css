@@ -1,28 +1,88 @@
 :root {
-  --blue-main: #0b6da8; --blue-deep: #075481; --blue-soft: #4d9bd2; --blue-pale: #d8ecfb;
-  --cream: #fff6dc; --cream-strong: #f8e9b8; --gray-bg: #f2f4f6; --gray-card: #e9edf2;
-  --gray-text: #65748a; --text-main: #151515; --red-risk: #ff1f2d; --black: #000000; --white: #ffffff; --line: #c8d2dc;
+  --ivory: #f7f1e3;
+  --warm-white: #fffaf0;
+  --wine: #5b1020;
+  --deep-wine: #341018;
+  --old-gold: #b88a3b;
+  --moss: #314f3a;
+  --mineral-blue: #274d63;
+  --earth: #7a4d2b;
+  --stone: #3d3a36;
+  --muted: #6f675d;
 }
 * { box-sizing: border-box; }
-body { margin:0; font-family: Inter, "Source Sans 3", Arial, system-ui, sans-serif; color: var(--text-main); background: var(--gray-bg); line-height:1.6; }
-.container{width:min(1140px,92%);margin:0 auto}.section{padding:3.7rem 0}.content-narrow{max-width:820px}
-h1,h2,h3{line-height:1.2;margin:0 0 .8rem}.brand-title,.hero-quote p,.quote-band p{font-family: Georgia,"EB Garamond",serif}
-.site-header{background:var(--blue-deep);color:var(--white);padding:1rem 0 .5rem;border-bottom:4px solid var(--blue-main)}
-.top-grid{display:grid;grid-template-columns:1fr 2fr 1fr;gap:1rem;align-items:center}.header-chip{background:var(--blue-main);padding:.9rem;border-radius:16px;font-size:.9rem}.align-right{text-align:right}
-.brand-wrap{text-align:center}.brand-title{font-size:clamp(2rem,4vw,3.2rem);font-style:italic}.brand-subtitle{margin:0;color:#e4f2ff}
-.nav-row{position:relative}.menu-toggle{display:none}.main-nav{display:flex;gap:1rem;padding:.8rem 0;flex-wrap:wrap}.main-nav a{color:var(--white);text-decoration:none;border-bottom:2px solid transparent}.main-nav a:focus-visible,.main-nav a:hover{border-color:var(--cream-strong)}
-.hero-infografico{background:var(--white)}.lead{max-width:75ch;color:var(--gray-text)}.hero-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin-top:1rem}
-.info-card{background:var(--blue-pale);border:1px solid var(--line);border-radius:14px;padding:1rem}.risk-card{background:var(--gray-card)}.risk-card h2{color:var(--red-risk)}
-.hero-quote{background:var(--white);border-left:6px solid var(--blue-main);padding:1rem 1rem 1rem 1.2rem;margin:0;border-radius:12px}.hero-quote p{font-size:1.35rem}
-.duo-cards{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.path-card{padding:1rem;border-radius:14px;border:1px solid var(--line)}.babel{background:var(--gray-card)}.jerusalem{background:var(--cream)}
-.path-card svg{width:100%;height:90px;stroke:var(--blue-soft);fill:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
-.quote-band{background:var(--white);border-top:2px solid var(--line);border-bottom:2px solid var(--line)}.quote-band blockquote{margin:0}.quote-band p{font-size:1.6rem}
-.split-grid{display:grid;grid-template-columns:1fr 56px 1fr;gap:1rem;align-items:start}.center-line{height:100%;min-height:220px;background:linear-gradient(var(--line),var(--blue-main),var(--cream-strong));border-radius:999px}
-.pill{display:inline-block;padding:.4rem .8rem;border-radius:999px;font-weight:700}.pill-babel{background:var(--gray-card)}.pill-jeru{background:var(--blue-main);color:var(--white)}.mini{color:var(--gray-text)}
-.pillars{background:var(--blue-pale)}.pillars-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem}.pillars-grid article{background:var(--white);padding:1rem;border-radius:10px;border:1px solid var(--line)}
-.actions{display:flex;gap:.7rem;flex-wrap:wrap}.btn{background:var(--blue-main);color:var(--white);text-decoration:none;border:0;border-radius:999px;padding:.7rem 1rem;font-weight:700;display:inline-block;cursor:pointer}.btn-alt{background:var(--blue-deep)}
-.gray{background:var(--white)}.eixos-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}.eixos-grid article{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:1rem}
-form{display:grid;gap:.6rem}input,select,button{font:inherit}input,select{padding:.65rem;border:1px solid var(--line);border-radius:8px}.check{display:flex;gap:.6rem;align-items:flex-start}.privacy-note{color:var(--gray-text)}
-.site-footer{background:var(--blue-deep);color:var(--white);padding:2rem 0}.site-footer a{color:#dcefff}
-@media (max-width: 920px){.hero-grid,.duo-cards,.eixos-grid{grid-template-columns:1fr 1fr}.top-grid{grid-template-columns:1fr}.align-right,.brand-wrap{text-align:left}.split-grid{grid-template-columns:1fr}}
-@media (max-width: 720px){.menu-toggle{display:block;background:var(--blue-main);color:#fff;border:1px solid #fff;border-radius:8px;padding:.4rem .7rem;margin:.6rem 0}.main-nav{display:none;flex-direction:column;background:var(--blue-deep);padding:.8rem;border-radius:10px}.main-nav.open{display:flex}.hero-grid,.duo-cards,.eixos-grid,.pillars-grid{grid-template-columns:1fr}}
+body {
+  margin: 0;
+  font-family: "Source Sans 3", Inter, system-ui, sans-serif;
+  color: var(--stone);
+  background: linear-gradient(180deg, var(--warm-white), var(--ivory));
+  line-height: 1.6;
+}
+.container { width: min(1120px, 92%); margin: 0 auto; }
+.content-narrow { max-width: 780px; }
+.site-header {
+  position: sticky; top: 0; z-index: 10;
+  backdrop-filter: blur(8px);
+  background: color-mix(in srgb, var(--warm-white) 88%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--old-gold) 35%, transparent);
+}
+.header-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .8rem 0; }
+.brand { text-decoration: none; color: var(--deep-wine); }
+.brand strong { display: block; font-family: "Cormorant Garamond", serif; font-size: 1.6rem; }
+.brand span { font-size: .9rem; color: var(--muted); }
+.main-nav { display: flex; gap: 1rem; flex-wrap: wrap; }
+.main-nav a { text-decoration: none; color: var(--stone); font-weight: 600; }
+.main-nav a:hover, .main-nav a:focus-visible { color: var(--wine); }
+.menu-toggle { display:none; }
+.hero-sistine {
+  min-height: 92vh;
+  position: relative;
+  display: grid;
+  align-items: center;
+  color: var(--warm-white);
+  /* Substituir a imagem abaixo por arquivo da Capela Sistina devidamente licenciado. */
+  background: url("img/capela-sistina-hero.jpg") center 25% / cover no-repeat;
+}
+.hero-overlay {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(circle at 50% 45%, color-mix(in srgb, var(--ivory) 26%, transparent), transparent 58%),
+    linear-gradient(90deg, color-mix(in srgb, var(--deep-wine) 88%, transparent), transparent 50%, color-mix(in srgb, var(--mineral-blue) 85%, transparent)),
+    radial-gradient(ellipse at center, transparent 40%, color-mix(in srgb, #000 40%, transparent) 100%),
+    repeating-linear-gradient(135deg, rgba(255,250,240,.02) 0 3px, rgba(0,0,0,.02) 3px 6px);
+}
+.hero-content { position: relative; z-index: 1; border: 1px solid rgba(184,138,59,.38); padding: clamp(1.5rem,4vw,3.25rem); border-radius: 24px; background: linear-gradient(180deg, rgba(0,0,0,.26), rgba(0,0,0,.35)); box-shadow: inset 0 0 0 1px rgba(247,241,227,.12); }
+.kicker { text-transform: uppercase; letter-spacing: .08em; font-size: .82rem; margin-bottom: .4rem; color: color-mix(in srgb, var(--ivory) 85%, var(--old-gold)); }
+h1,h2,h3 { font-family: "Cormorant Garamond", Georgia, serif; line-height: 1.15; margin: 0 0 .75rem; }
+h1 { font-size: clamp(2.5rem, 7vw, 5rem); }
+h2 { font-size: clamp(2rem, 4vw, 3rem); color: var(--deep-wine); }
+.subtitle { font-size: clamp(1.2rem, 3vw, 1.8rem); margin: 0 0 1rem; }
+.lead { max-width: 65ch; }
+.hero-note { font-size: .95rem; color: color-mix(in srgb, var(--ivory) 92%, var(--old-gold)); margin-top: 1rem; }
+.hero-actions, .inline-actions { display: flex; gap: .75rem; flex-wrap: wrap; margin-top: 1.1rem; }
+.btn { display:inline-block; text-decoration:none; border-radius: 999px; padding: .68rem 1.2rem; font-weight: 700; border:1px solid transparent; }
+.btn-primary { background: var(--old-gold); color: #1e1406; }
+.btn-secondary { background: transparent; color: var(--warm-white); border-color: color-mix(in srgb, var(--old-gold) 60%, white); }
+.section { padding: clamp(3.5rem, 7vw, 6rem) 0; }
+.section-alt { background: color-mix(in srgb, var(--ivory) 72%, white); }
+.cards-grid { margin-top: 1.4rem; display:grid; gap: 1rem; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); }
+.card { background: var(--warm-white); border: 1px solid color-mix(in srgb, var(--old-gold) 40%, #fff); border-radius: 16px; padding: 1.1rem; }
+.elegant-list { padding-left: 1.2rem; }
+.elegant-list li::marker { color: var(--old-gold); }
+form { margin-top: 1rem; display:grid; gap: .55rem; }
+input, select, button { font: inherit; }
+input, select { padding: .7rem; border-radius: 10px; border:1px solid #b6aea4; background:#fff; }
+.checkbox-label { display:flex; align-items:flex-start; gap:.6rem; font-size: .95rem; }
+#adhesionMessage { min-height: 1.2em; font-weight: 600; color: var(--moss); }
+.privacy-note { font-size: .9rem; color: var(--muted); }
+.site-footer { background: var(--deep-wine); color: var(--ivory); padding: 2.2rem 0; }
+.site-footer a { color: color-mix(in srgb, var(--old-gold) 75%, white); }
+.reveal-up { animation: revealUp .8s ease-out both; }
+@keyframes revealUp { from { opacity:0; transform: translateY(14px);} to { opacity:1; transform: translateY(0);} }
+
+@media (max-width: 880px) {
+  .menu-toggle { display:block; padding:.5rem .8rem; border:1px solid #b6aea4; border-radius:8px; background:white; }
+  .main-nav { display:none; position:absolute; top:100%; right:4%; width:min(320px,92%); background:var(--warm-white); border:1px solid #d7cebf; border-radius:12px; padding:.8rem; flex-direction:column; }
+  .main-nav.open { display:flex; }
+  .hero-sistine { min-height: 82vh; background-position: center 35%; }
+}
