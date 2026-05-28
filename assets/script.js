@@ -62,36 +62,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-
-document.addEventListener("DOMContentLoaded", () => {
-  const toggle = document.querySelector(".nav-toggle");
-  const nav = document.querySelector(".main-nav");
-
-  if (!toggle || !nav) return;
-
-  toggle.addEventListener("click", () => {
-    const isOpen = document.body.classList.toggle("nav-open");
-    toggle.setAttribute("aria-expanded", String(isOpen));
-  });
-
-  nav.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      document.body.classList.remove("nav-open");
-      toggle.setAttribute("aria-expanded", "false");
-
-      if (typeof trackEvent === "function") {
-        trackEvent("nav_click", {
-          label: link.textContent.trim(),
-          href: link.getAttribute("href")
-        });
-      }
-    });
-  });
-
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-      document.body.classList.remove("nav-open");
-      toggle.setAttribute("aria-expanded", "false");
-    }
-  });
-});
